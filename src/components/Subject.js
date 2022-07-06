@@ -9,15 +9,12 @@ class Subject extends Component {
         return (
             <header>
                 <h1><a href="/" onClick={function(e){
-                    //링크를 클릭할 경우 화면의 깜빡임이 없도록
-                    //호출한다.
+                    //링크를 클릭할경우 화면의 깜빡임이 없도록 호출한다.
                     e.preventDefault();
                     //부모에서 props로 전달해준 이벤트 함수를 실행한다.
                     this.props.onChangePage();
-                    //일반함수를 사용하는 경우 반드시 this와 bind()를 해줘야한다.
-                }.bind(this)}>{this.props.title}
-                </a></h1>
-                <h1><a href="/">{this.props.title}</a></h1>
+                    //일반함수를 사용하는 경우 반드시 this와 bind()해줘야한다.
+                }.bind(this)}>{this.props.title}</a></h1>
                 {this.props.sub}
             </header>
         );
